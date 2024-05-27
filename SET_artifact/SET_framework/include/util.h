@@ -6,6 +6,7 @@
 #include <limits>
 #include <iostream>
 
+// 最大芯片数量为 258
 #define MAX_CHIPS 258
 
 // Need to guarantee that x is not 0

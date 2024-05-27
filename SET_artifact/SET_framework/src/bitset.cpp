@@ -22,6 +22,7 @@ Bitset::Bitset(Bitset::bitlen_t bit):std_bs(){
 	set(bit);
 }
 
+// 注意这里 bits 里面是指针
 Bitset::Bitset(std::initializer_list<Bitset::bitlen_t> bits):std_bs(){
 	for(auto i = bits.begin(); i!= bits.end(); ++i){
 		set(*i);

@@ -14,12 +14,18 @@ public:
 	};
 	*/
 	typedef vol_t hop_t;
+	// Traditional XY index of a chip. (e.g. y * xlen + x)
 	typedef cidx_t xyid_t;
 	typedef std::unique_ptr<cidx_t[]> allocRes_t;
+	// xlen/ylen: The x and y length of the cluster
+	// stride:    Used in the strided allocation algorithm.
+	// min_util:  Minimal utilization (in alloc algorithm).
 	static mlen_t xlen,ylen,stride;
 	static double min_util;
 private:
 	//const core* cores;
+	// Range of the cluster, a cluster has chips with cidx:
+	// first, first+1, ..., last-1
 	struct{
 		cidx_t first, last;
 	}range;
